@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>VARIABLE.HTML</h1>
+    
+    <ul>
+        {% for num in some_list %}
+            {% if num == 2 %}
+                <li>TWO</li>
+            {% else %}
+                <li> {{ num }} </li>
+            {% endif %}    
+        {% endfor %}
+    </ul>
+    {% comment "Past Practice Scripts" %}
+    {% if user_logged_in %}
+        <h2> Welcome back! You are logged in. </h2>
+    {% else %}
+        <h2> Welcome Guest </h2>
+    {% endif %}
+
+    <ul>
+        {% for item in some_list %}
+            <li> {{ item }} </li>
+        {% endfor %}
+    </ul>
+
+    <ol>
+        {% for k, v in some_dict.items %}
+            <li> {{ v }} </li>
+        {% endfor %}
+    </ol>
+    {% endcomment %}
+</body>
+</html>
